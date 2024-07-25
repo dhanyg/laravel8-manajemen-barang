@@ -69,7 +69,7 @@ Ada dua cara untuk menjalankan aplikasi berbasis laravel ini.
   
 Pertama, apabila lokasi direktori aplikasi sudah berada di dalam `htdocs` atau `www` maka untuk mengaksesnya menggunakan url berikut:
 ```
-http:localhost/sembarang/public
+http://localhost/sembarang/public
 ```
 Diasumsikan bahwa nama direktori telah diubah menjadi `sembarang` dan aplikasi diletakkan di dalam direktori `htdocs` pada XAMPP atau `www` pada Laragon.  
   
