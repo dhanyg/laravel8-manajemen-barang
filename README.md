@@ -32,18 +32,6 @@ Lakukan instalasi Laravel beserta dependensi-dependensi yang dibutuhkan dengan m
 composer install
 ```
   
-_Generate key_ dengan perintah:
-```
-php artisan key:generate
-```
-  
-Lakukan link _storage_ untuk kebutuhan menyimpan gambar barang.  
-```
-php artisan storage:link
-```
-  
-Pindahkan file `nopicture.jpg` yang ada di dalam direktori **public** ke dalam direktori **public/storage**.
-  
 Konfigurasi file `.env` dengan mengcopy file `.env.example`
 ```
 cp .env.example .env
@@ -56,6 +44,18 @@ Ubah beberapa konfigurasi berikut:
 - `DB_DATABASE`, isi dengan nama database yang akan digunakan, jadi pastikan sudah membuat databasenya terlebih dahulu.
 - `DB_USERNAME`, isi dengan username yang akan digunakan untuk login ke database (nilai defaultnya adalah user _root_).
 - `DB_PASSWORD`, isi dengan password yang digunakan untuk login ke database (nilai defaultnya adalah kosong atau tanpa password).
+  
+Selanjutnya _generate key_ dengan perintah:
+```
+php artisan key:generate
+```
+  
+Lakukan link _storage_ untuk kebutuhan menyimpan gambar barang.  
+```
+php artisan storage:link
+```
+  
+Pindahkan file `nopicture.jpg` yang ada di dalam direktori **public** ke dalam direktori **public/storage**.  
   
 Selanjutnya lakukan _database migration_.
 ```
