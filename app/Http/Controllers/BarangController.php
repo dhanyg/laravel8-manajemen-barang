@@ -35,8 +35,8 @@ class BarangController extends Controller
         DB::beginTransaction();
         $data = $request->validated();
         $data['gambar'] = $namaGambar;
-        $data['ditambahkan_oleh'] = Auth::user()->nama;
-        $data['disunting_oleh'] = '';
+        $data['penginput'] = Auth::user()->nama;
+        $data['penyunting'] = '';
 
         /** Simpan data ke dalam database. */
         Barang::create($data);

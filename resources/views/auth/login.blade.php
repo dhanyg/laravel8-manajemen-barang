@@ -42,58 +42,50 @@
                 <div class="card-body">
                     <p class="h3 text-center mb-4">Silakan login untuk mengelola barang.</p>
                     @if (session('error'))
-                        <div class="alert alert-important alert-danger alert-dismissible" role="alert">
-                            <div class="d-flex">
-                                <div>
-                                    {{ session('error') }}
-                                </div>
+                    <div class="alert alert-important alert-danger alert-dismissible" role="alert">
+                        <div class="d-flex">
+                            <div>
+                                {{ session('error') }}
                             </div>
-                            <a class="btn-close" data-bs-dismiss="alert" aria-label="close"></a>
                         </div>
+                        <a class="btn-close" data-bs-dismiss="alert" aria-label="close"></a>
+                    </div>
                     @elseif (session('success'))
-                        <div class="alert alert-important alert-success alert-dismissible" role="alert">
-                            <div class="d-flex">
-                                <div>
-                                    {{ session('success') }}
-                                </div>
+                    <div class="alert alert-important alert-success alert-dismissible" role="alert">
+                        <div class="d-flex">
+                            <div>
+                                {{ session('success') }}
                             </div>
-                            <a class="btn-close" data-bs-dismiss="alert" aria-label="close"></a>
                         </div>
+                        <a class="btn-close" data-bs-dismiss="alert" aria-label="close"></a>
+                    </div>
                     @endif
                     <form action="{{ route('auth.login') }}" method="POST">
                         @csrf
                         <div class="mb-3">
                             <label class="form-label">Username</label>
-                            <input name="username" type="text"
-                                class="form-control @error('username') is-invalid @enderror" placeholder="Username Anda"
-                                autofocus>
+                            <input name="username" type="text" class="form-control @error('username') is-invalid @enderror" placeholder="Username Anda" autofocus>
                             @error('username')
-                                <div class="invalid-feedback">{{ $message }}</div>
+                            <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Password
                             </label>
-                            <div
-                                class="input-group input-group-flat @error('password') border border-danger rounded @enderror">
-                                <input name="password" type="password" class="form-control" placeholder="Password Anda"
-                                    autocomplete="off">
+                            <div class="input-group input-group-flat @error('password') border border-danger rounded @enderror">
+                                <input name="password" type="password" class="form-control" placeholder="Password Anda" autocomplete="off">
                                 <span class="input-group-text">
-                                    <a href="#" class="link-secondary" title="Show password"
-                                        data-bs-toggle="tooltip"><!-- Download SVG icon from http://tabler-icons.io/i/eye -->
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24"
-                                            height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                                            fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <a href="#" class="link-secondary" title="Show password" data-bs-toggle="tooltip"><!-- Download SVG icon from http://tabler-icons.io/i/eye -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                             <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-                                            <path
-                                                d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+                                            <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
                                         </svg>
                                     </a>
                                 </span>
                             </div>
                             @error('password')
-                                <div class="invalid-feedback">{{ $message }}</div>
+                            <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="mb-2">
