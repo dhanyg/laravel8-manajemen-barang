@@ -33,7 +33,7 @@
     <div class="page page-center">
         <div class="container container-tight py-4">
             <div class="text-center mb-4">
-                <a href="." class="navbar-brand navbar-brand-autodark">
+                <a href="/" class="navbar-brand navbar-brand-autodark">
                     <h1>SemBarang</h1>
                 </a>
                 <span class="d-block text-muted text-center">(Sistem Manajemen Barang)</span>
@@ -64,7 +64,7 @@
                         @csrf
                         <div class="mb-3">
                             <label class="form-label">Username</label>
-                            <input name="username" type="text" class="form-control @error('username') is-invalid @enderror" placeholder="Username Anda" autofocus>
+                            <input name="username" type="text" class="form-control @error('username') is-invalid @enderror" placeholder="Username Anda" value="{{old('username')}}" autofocus>
                             @error('username')
                             <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
@@ -85,7 +85,7 @@
                                 </span>
                             </div>
                             @error('password')
-                            <div class="invalid-feedback">{{ $message }}</div>
+                            <div class="mt-1 text-danger fs-5">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="mb-2">

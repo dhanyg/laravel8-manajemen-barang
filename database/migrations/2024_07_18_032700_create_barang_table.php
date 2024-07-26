@@ -17,7 +17,7 @@ class CreateBarangTable extends Migration
             $table->integer('id', true);
             $table->integer('id_kategori');
             $table->string('nama', 100);
-            $table->text('deskripsi');
+            $table->text('deskripsi')->nullable();
             $table->string('gambar', 255);
             $table->string('penginput', 50);
             $table->string('penyunting', 50);
