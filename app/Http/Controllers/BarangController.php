@@ -79,7 +79,7 @@ class BarangController extends Controller
         if ($dataGambar) {
             $data['gambar'] = $namaGambar;
         }
-        $data['disunting_oleh'] = Auth::user()->nama;
+        $data['penyunting'] = Auth::user()->nama;
 
         /** Update data ke database. */
         $barang->update($data);
