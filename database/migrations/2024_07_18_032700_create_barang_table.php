@@ -20,7 +20,7 @@ class CreateBarangTable extends Migration
             $table->text('deskripsi')->nullable();
             $table->string('gambar', 255);
             $table->string('penginput', 50);
-            $table->string('penyunting', 50);
+            $table->string('penyunting', 50)->nullable();
             $table->foreign('id_kategori')->references('id')->on('kategori');
         });
     }
